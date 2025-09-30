@@ -23,9 +23,9 @@ export function InstallPrompt() {
   }
 
   return (
-    <div>
-      <h3>Install App</h3>
-      <button>Add to Home Screen</button>
+    <div className='w-full p-4 rounded bg-gray-800'>
+      <h3 className='text-xl mb-2'>Install App</h3>
+      <button className='bg-teal-500 py-2 px-2 rounded text-sm font-bold'>Add to Home Screen</button>
       {isIOS && (
         <p>
           To install this app on your iOS device, tap the share button
