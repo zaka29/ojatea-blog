@@ -68,24 +68,35 @@ export function PushNotificationsManager() {
   }
 
   return (
-    <div>
-      <h3>Push Notifications</h3>
+    <div className='w-full'>
+      <h3 className='text-xl mb-2'>Push Notifications</h3>
       {subscription ? (
         <>
-          <p>You are subscribed to push notifications.</p>
-          <button onClick={unsubscribeFromPush}>Unsubscribe</button>
-          <input
-            type="text"
-            placeholder="Enter notification message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-          <button onClick={sendTestNotification}>Send Test</button>
+          <div className='p-2 border border-gray-700 rounded mb-4'>
+            <p className='mb-2'>You are subscribed to push notifications.</p>
+            <div>
+              <button className='bg-amber-500 py-0.5 px-2 rounded text-sm font-bold'
+                      onClick={unsubscribeFromPush}>Unsubscribe
+              </button>
+            </div>
+          </div>
+
+
+          <div className='flex flex-col gap-4 items-start pt-2'>
+            <input
+              className='w-full border border-gray-500 p-2 px-2 rounded text-sm'
+              type="text"
+              placeholder="Enter notification message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+            <button className='bg-teal-500 py-2 px-2 rounded text-sm font-bold' onClick={sendTestNotification}>Send test notification</button>
+          </div>
         </>
       ) : (
         <>
-          <p>You are not subscribed to push notifications.</p>
-          <button onClick={subscribeToPush}>Subscribe</button>
+          <p className='mb-2'>You are not subscribed to push notifications.</p>
+          <button className='bg-teal-500 py-1 px-2 rounded text-sm font-bold' onClick={subscribeToPush}>Subscribe</button>
         </>
       )}
     </div>
