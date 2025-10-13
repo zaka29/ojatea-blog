@@ -8,7 +8,7 @@ export default function HomePage() {
         className="flex items-center gap-2 bg-amber-500 py-0.5 px-2 rounded text-sm font-bold"
         href="/subscriptions"
       >
-        <Link2 /> Subscriptions
+        <Link2 /> Manage Subscriptions
       </Link>
     </div>
   );
